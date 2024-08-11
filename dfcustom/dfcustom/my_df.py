@@ -35,7 +35,6 @@ def _build_conditions(process_type, account, company, invoice_number=None):
 
 def _convert_deferred_expense_to_expense(deferred_process, start_date=None, end_date=None, conditions="",invoice_number=""):
 	# book the expense/income on the last day, but it will be trigger on the 1st of month at 12:00 AM
-	frappe.msgprint("deferred e to e")
 
 	if not start_date:
 		start_date = add_months(today(), -1)
@@ -71,7 +70,6 @@ def _convert_deferred_expense_to_expense(deferred_process, start_date=None, end_
 
 def _convert_deferred_revenue_to_income(deferred_process, start_date=None, end_date=None, conditions="",invoice_number=""):
 	# book the expense/income on the last day, but it will be trigger on the 1st of month at 12:00 AM
-	frappe.msgprint("deferred r to i")
 	if not start_date:
 		start_date = add_months(today(), -1)
 	if not end_date:
