@@ -100,4 +100,3 @@ def _convert_deferred_revenue_to_income(deferred_process, start_date=None, end_d
 	if frappe.flags.deferred_accounting_error:
 		send_mail(deferred_process)
 
-
