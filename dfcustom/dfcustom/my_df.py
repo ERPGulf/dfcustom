@@ -1,3 +1,4 @@
+from erpnext.accounts.doctype.accounting_dimension.accounting_dimension import get_accounting_dimensions
 import frappe
 from frappe.model.document import Document
 from erpnext.accounts.deferred_revenue import book_deferred_income_or_expense
