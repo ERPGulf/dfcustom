@@ -120,7 +120,6 @@ app_license = "mit"
 override_doctype_class = {
 	"Process Deferred Accounting": "dfcustom.dfcustom.my_df.Custom_ProcessDeferredAccounting",
     "Account" : "dfcustom.dfcustom.bank_no.Custom_Account"
-    # "Journal Entry": "dfcustom.dfcustom.custom_jv.CustomJournalEntry"
 }
 
 

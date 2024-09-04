@@ -24,11 +24,9 @@ class Custom_Account(NestedSet):
             valid_account_numbers = [int(account['account_number']) for account in child_accounts if account['account_number']]
 
             if valid_account_numbers:
-                frappe.msgprint("Child accounts exist. Generating next account number.")
                 last_account_number = max(valid_account_numbers)
                 new_account_number = last_account_number + 1
             else:
-                frappe.msgprint("No valid child accounts found. Starting from base value.")
                 new_account_number = prefix + starting_value
 
             self.account_number = str(new_account_number)

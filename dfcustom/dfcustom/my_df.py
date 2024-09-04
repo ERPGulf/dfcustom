@@ -1,4 +1,3 @@
-from erpnext.accounts.doctype.accounting_dimension.accounting_dimension import get_accounting_dimensions
 import frappe
 from frappe.model.document import Document
 from erpnext.accounts.deferred_revenue import book_deferred_income_or_expense
@@ -44,7 +43,6 @@ def _convert_deferred_expense_to_expense(deferred_process, start_date=None, end_
 
 	conditions += _build_conditions("Expense", None, None, invoice_number)
 
-	# check for the purchase invoice for which GL entries have to be done
 	invoices = frappe.db.sql_list(
 		f"""
 		SELECT DISTINCT item.parent
@@ -78,7 +76,6 @@ def _convert_deferred_revenue_to_income(deferred_process, start_date=None, end_d
 
 	conditions += _build_conditions("Income", None, None, invoice_number)
 
-	# check for the sales invoice for which GL entries have to be done
 	invoices = frappe.db.sql_list(
 		f"""
 		SELECT DISTINCT item.parent
