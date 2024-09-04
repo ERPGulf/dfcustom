@@ -168,7 +168,6 @@ override_whitelisted_methods = {
     "erpnext.accounts.deferred_revenue.convert_deferred_expense_to_expense" : "df_custom.my_df._convert_deferred_expense_to_expense",
     "erpnext.accounts.deferred_revenue.convert_deferred_revenue_to_income" : "df_custom.my_df._convert_deferred_revenue_to_income",    
     "erpnext.accounts.deferred_revenue.build_conditions" : "df_custom.my_df._build_conditions",
-    "erpnext.accounts.deferred_revenue.book_revenue_via_journal_entry" : "df_custom.my_df.custom_book_revenue_via_journal_entry"
 }
 #
 # each overriding function accepts a `data` argument;
